@@ -1,0 +1,14 @@
+{
+  "name": "generator-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giuseppe Rodriguez <giusepperj@outlook.com> (https://github.com/giusepperj)",
+  "license": "ISC",
+  "dependencies": {
+    "yeoman-generator": "^0.18.10"
+  }
+}
