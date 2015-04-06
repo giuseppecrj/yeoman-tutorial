@@ -56,19 +56,24 @@ var generatorObject = {
       choices: ['jquery']
     }
 
+    // self.log(self.user.git.name())
+    // self.log(self.user.git.email())
+    // self.log(self.user.github.username())
+
     var githubUserName = {
       type: 'input',
       name: 'githubUserName',
-      message: 'Github user name',
-      store: true
+      message: 'Github user name'
     }
 
     self.prompt(
       [projectName, githubUserName, npmProjectDependencies, bowerProjectDependencies],
       function(answers) {
         self.log(answers)
+
+        self.answers = answers
+        self.answers.githubUserName = self.user.git.name() + ' <' + self.user.git.email() + '> ' + '(https://github.com/' + answers.githubUserName + ')'
         self.config.set(answers)
-        self.answers = answers // save answers to
         done()
       })
   },
